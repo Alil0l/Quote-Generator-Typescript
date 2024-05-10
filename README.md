@@ -1,4 +1,4 @@
-# Hangman Game
+# Random Quote Generator
 
 ## Landing
 
