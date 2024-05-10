@@ -11,3 +11,4 @@
 
 * **Using HTML, Sass, TypeScript, Bootstrap ** 
 * **Used a random quotes API to get the quotes.**
+* **Fully Responsive App**
