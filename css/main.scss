@@ -1,0 +1,83 @@
+// No need for global rules bcs bootstrap adds it.
+$bs-main-color: #0d6efd;
+$bs-sec-color: #cde1f8;
+// Mixins
+// Adding local fonts
+@mixin font($font-family, $font-files) {
+  @each $font-file, $font-weight in $font-files {
+    @font-face {
+      font-family: "#{$font-family}-#{$font-weight}";
+      src: url("#{$font-file}.ttf");
+      font-weight: $font-weight;
+    }
+  }
+}
+
+$Raleway-font-files: (
+  ("../assets/fonts/Raleway-Black", 800),
+  ("../assets/fonts/Poppins-Bold", 700),
+  ("../assets/fonts/Poppins-Medium", 600),
+  ("../assets/fonts/Poppins-Regular", 400)
+);
+@import url("https://fonts.googleapis.com/css2?family=Briem+Hand:wght@800&family=Indie+Flower&display=swap");
+@include font("Raleway", $Raleway-font-files);
+
+// Global classes
+
+.h-100vh {
+  height: 100dvh;
+}
+
+.mh-40 {
+  min-height: 40%;
+}
+.container {
+  transition: all 0.2s;
+  .card {
+    overflow: hidden;
+    border: none;
+    position: relative;
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    background-color: #f5efe6;
+    h1 {
+      font-family: "Briem Hand", cursive;
+      color: #7d0a0a;
+    }
+    p {
+      font-family: "Indie Flower", cursive;
+
+      :first-child {
+        position: relative;
+        top: -9px;
+        left: -5px;
+      }
+      :last-child {
+        position: relative;
+        top: -9px;
+        right: -5px;
+      }
+    }
+    span {
+      font-family: "Indie Flower", cursive;
+    }
+    button {
+      color: #7d0a0a;
+      background-color: transparent;
+      border: 1px solid #7d0a0a;
+      &:hover,
+      &:active {
+        color: white;
+        background-color: #7d0a0a;
+        border: 1px solid transparent;
+      }
+    }
+  }
+}
+// End of  mixins and classes
+
+//  Start of the main stylesheet
